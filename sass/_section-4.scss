@@ -8,11 +8,12 @@
             ul {
                 display: flex;
                 flex-wrap: wrap;
-                border: 1px solid red;
+                max-width: 80%;
                 li {
                     flex-basis: 50%;
                     font-size: 1rem;
                     vertical-align: middle;
+                    margin-bottom: 1rem;
                     i {
                         margin-right: 1rem;
                         font-size: 1.6rem

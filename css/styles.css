@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --text-color: #4E4E4E;
   --text-color-other: #ED0081;
@@ -13,104 +14,96 @@ html, body {
   padding: 0;
 }
 
-body {
-  background: url("../detalle_de_hotel-desktop.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 550vh;
-}
-
-.container section.section-1 {
+.container section .principal {
   background-color: white;
 }
-.container section.section-1 img {
+.container section .principal img {
   margin: auto;
   width: 100%;
 }
-.container section.section-1 article {
+.container section .principal article {
   display: flex;
   flex-wrap: wrap;
 }
-.container section.section-1 article .description {
+.container section .principal article .description {
   flex: 1 0 70%;
   display: flex;
   color: var(--text-color);
 }
-.container section.section-1 article .description .info {
+.container section .principal article .description .info {
   padding: 1rem 0;
   flex: 3;
 }
-.container section.section-1 article .description .info h1 {
+.container section .principal article .description .info h1 {
   font-size: 2rem;
   margin: 0;
 }
-.container section.section-1 article .description .info .icons {
+.container section .principal article .description .info .icons {
   display: block;
 }
-.container section.section-1 article .description .info .icons i {
+.container section .principal article .description .info .icons i {
   font-size: 1.2rem;
   margin-right: 1rem;
 }
-.container section.section-1 article .description .added {
+.container section .principal article .description .added {
   flex: 1;
   padding: 2rem 2px;
 }
-.container section.section-1 article .description .added .stars {
+.container section .principal article .description .added .stars {
   color: orange;
   display: block;
 }
-.container section.section-1 article .description .added .stars * {
+.container section .principal article .description .added .stars * {
   color: inherit;
 }
-.container section.section-1 article .reservation {
+.container section .principal article .reservation {
   flex: 1 0 30%;
   color: var(--text-color);
   padding: 1rem 2px;
   max-height: 9rem;
   overflow-y: visible;
 }
-.container section.section-1 article .reservation p {
+.container section .principal article .reservation p {
   display: inline-block;
   min-width: 50%;
   white-space: nowrap;
   margin: 0;
 }
-.container section.section-1 article .reservation p span {
+.container section .principal article .reservation p span {
   color: var(--text-color-other);
 }
-.container section.section-1 article .reservation .total {
+.container section .principal article .reservation .total {
   margin: 3rem 0 0.6rem 0;
 }
-.container section.section-1 article .reservation .total strong {
+.container section .principal article .reservation .total strong {
   font-size: 1.4rem;
 }
-.container section.section-1 article .horary {
+.container section .principal article .horary {
   flex-basis: 60%;
   display: flex;
   align-items: center;
   padding: 0.2rem 2px;
   border-bottom: 1px solid var(--color-border-separator);
 }
-.container section.section-1 article .horary h2 {
+.container section .principal article .horary h2 {
   flex-grow: 1;
 }
-.container section.section-1 article .horary ul {
+.container section .principal article .horary ul {
   flex-grow: 2;
   display: flex;
   padding: 0;
   list-style: none;
 }
-.container section.section-1 article .horary ul li {
+.container section .principal article .horary ul li {
   margin-right: 2rem;
   padding: 0.5rem 0;
   text-transform: uppercase;
   text-align: center;
 }
-.container section.section-1 article .horary ul li strong {
+.container section .principal article .horary ul li strong {
   display: block;
 }
-.container section.section-1 article .horary ul li.separator {
+.container section .principal article .horary ul li.separator {
   border-right: 1px solid #CBCBCB;
 }
 
@@ -166,16 +159,141 @@ body {
 .container section .services ul {
   display: flex;
   flex-wrap: wrap;
-  border: 1px solid red;
+  max-width: 80%;
 }
 .container section .services ul li {
   flex-basis: 50%;
   font-size: 1rem;
   vertical-align: middle;
+  margin-bottom: 1rem;
 }
 .container section .services ul li i {
   margin-right: 1rem;
   font-size: 1.6rem;
+}
+
+.container section .instructions {
+  border-bottom: 1px solid var(--color-border-separator);
+  background-color: white;
+  padding: 2rem 0;
+}
+
+.container section .available {
+  border-bottom: 1px solid var(--color-border-separator);
+  background-color: white;
+  padding: 2rem 0;
+}
+.container section .available ul.list-style li {
+  padding-left: 1rem;
+  padding-right: 0.5rem;
+}
+.container section .available ul.list-style li:before {
+  content: "• ";
+  color: var(--text-color-other);
+  margin-left: -0.5rem;
+}
+.container section .available table {
+  width: 100%;
+  background-color: #F7F7F7;
+  border-collapse: separate;
+  border-spacing: 6px 12px;
+}
+.container section .available table thead {
+  background-color: white;
+  text-transform: uppercase;
+}
+.container section .available table thead tr {
+  background-color: white;
+}
+.container section .available table thead tr th {
+  color: var(--text-color-other);
+  position: relative;
+  padding: 1rem 0.2rem;
+}
+.container section .available table thead tr th.type, .container section .available table thead tr th:first-child {
+  max-width: 292px;
+  width: 292px;
+}
+.container section .available table thead tr th .detail, .container section .available table thead tr th:last-child {
+  max-width: 250px;
+  width: 250px;
+}
+.container section .available table tbody {
+  font-size: 0.9rem;
+}
+.container section .available table tbody tr td {
+  background-color: white;
+}
+.container section .available table tbody tr td div img {
+  display: block;
+  width: 100%;
+  margin: auto;
+}
+.container section .available table tbody tr td div .content {
+  display: block;
+  margin: auto;
+  max-width: 80%;
+}
+.container section .available table tbody tr td div .content h3 {
+  text-transform: capitalize;
+}
+.container section .available table tbody tr td div .content ul li {
+  padding: 0.3rem 0;
+}
+.container section .available table tbody tr td div .content ul li i {
+  width: 1.6rem;
+}
+.container section .available table tbody tr td.options {
+  max-width: 160px;
+  width: 160px;
+}
+.container section .available table tbody tr td.price {
+  text-align: center;
+}
+.container section .available table tbody tr td.price span {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+.container section .available table tbody tr td.price span strong {
+  font-size: 1.6rem;
+}
+.container section .available table tbody tr td.price {
+  text-align: center;
+}
+.container section .available table tbody tr td.price span {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+.container section .available table tbody tr td.price span strong {
+  font-size: 1.6rem;
+}
+.container section .available table tbody tr td.choose {
+  text-align: center;
+}
+.container section .available table tbody tr td.detail {
+  padding: 0.5rem 1rem;
+}
+.container section .available table tbody tr td.detail span {
+  width: 90%;
+  margin: 0.5rem auto;
+  display: block;
+}
+.container section .available table tbody tr td.detail span.price {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+.container section .available table tbody tr td.detail span.price strong {
+  font-size: 1.6rem !important;
+}
+.container section .available table tbody tr td.detail span.price small {
+  display: block;
+  font-size: small;
+  text-transform: initial;
+}
+.container section .available table tbody tr td.detail button {
+  width: 90%;
+  margin: 0.5rem auto;
+  display: block;
 }
 
 /* Button */
@@ -218,6 +336,11 @@ button.btn-upate:active {
   opacity: 1;
 }
 
+.link {
+  text-decoration: none;
+  color: var(--text-color-other);
+}
+
 * {
   box-sizing: border-box;
   color: var(--text-color);
@@ -227,7 +350,6 @@ ul {
   list-style: none;
   padding: 0;
 }
-
 section .title {
   color: var(--text-color-other) !important;
 }
@@ -243,7 +365,6 @@ header {
   margin: auto;
 }
 header nav {
-  margin-top: -10rem;
   color: var(--text-color);
   background-color: white;
   display: flex;

@@ -11,22 +11,22 @@ html, body{
     width:100%;
     margin: 0;
     padding: 0;
-    // border: 1px solid red;
 }
 
 body {
-    // border: 1px solid;
-    background: url("../detalle_de_hotel-desktop.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 550vh;
+    // background: url("../detalle_de_hotel-desktop.jpg");
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    // width: 100%;
+    // height: 550vh;
 }
 
 @import './section-1';
 @import './section-2';
 @import './section-3';
 @import './section-4';
+@import './section-5';
+@import './section-6';
 @import './btn';
 
 * {
@@ -36,7 +36,10 @@ body {
 
 ul {
     list-style: none;
-    padding: 0
+    padding: 0;
+
+    i {
+    }
 }
 
 section {
@@ -49,7 +52,6 @@ section {
     max-width: 1024px;
     margin: auto;
     padding-top: 3rem;
-    // opacity: 0.5
 }
 
 
@@ -58,7 +60,7 @@ header{
     margin: auto;
 
     nav {
-        margin-top: -10rem;
+        // margin-top: -20rem;
         $font-size: 0.8rem;
         color: var(--text-color);
         background-color: white;
