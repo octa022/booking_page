@@ -1,0 +1,289 @@
+:root {
+  --text-color: #4E4E4E;
+  --text-color-other: #ED0081;
+  --text-color-hover: #ED0081;
+  --btn-color: #ED0081;
+  --color-border-separator: #CBCBCB;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url("../detalle_de_hotel-desktop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 550vh;
+}
+
+.container section.section-1 {
+  background-color: white;
+}
+.container section.section-1 img {
+  margin: auto;
+  width: 100%;
+}
+.container section.section-1 article {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container section.section-1 article .description {
+  flex: 1 0 70%;
+  display: flex;
+  color: var(--text-color);
+}
+.container section.section-1 article .description .info {
+  padding: 1rem 0;
+  flex: 3;
+}
+.container section.section-1 article .description .info h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+.container section.section-1 article .description .info .icons {
+  display: block;
+}
+.container section.section-1 article .description .info .icons i {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+}
+.container section.section-1 article .description .added {
+  flex: 1;
+  padding: 2rem 2px;
+}
+.container section.section-1 article .description .added .stars {
+  color: orange;
+  display: block;
+}
+.container section.section-1 article .description .added .stars * {
+  color: inherit;
+}
+.container section.section-1 article .reservation {
+  flex: 1 0 30%;
+  color: var(--text-color);
+  padding: 1rem 2px;
+  max-height: 9rem;
+  overflow-y: visible;
+}
+.container section.section-1 article .reservation p {
+  display: inline-block;
+  min-width: 50%;
+  white-space: nowrap;
+  margin: 0;
+}
+.container section.section-1 article .reservation p span {
+  color: var(--text-color-other);
+}
+.container section.section-1 article .reservation .total {
+  margin: 3rem 0 0.6rem 0;
+}
+.container section.section-1 article .reservation .total strong {
+  font-size: 1.4rem;
+}
+.container section.section-1 article .horary {
+  flex-basis: 60%;
+  display: flex;
+  align-items: center;
+  padding: 0.2rem 2px;
+  border-bottom: 1px solid var(--color-border-separator);
+}
+.container section.section-1 article .horary h2 {
+  flex-grow: 1;
+}
+.container section.section-1 article .horary ul {
+  flex-grow: 2;
+  display: flex;
+  padding: 0;
+  list-style: none;
+}
+.container section.section-1 article .horary ul li {
+  margin-right: 2rem;
+  padding: 0.5rem 0;
+  text-transform: uppercase;
+  text-align: center;
+}
+.container section.section-1 article .horary ul li strong {
+  display: block;
+}
+.container section.section-1 article .horary ul li.separator {
+  border-right: 1px solid #CBCBCB;
+}
+
+.container section .learn_more {
+  border-bottom: 1px solid var(--color-border-separator);
+  background-color: white;
+  padding: 2rem 0;
+}
+.container section .learn_more h2 {
+  margin-top: 0;
+}
+.container section .learn_more p {
+  color: inherit;
+  text-align: left;
+  margin: 0;
+}
+
+.container section .closeness {
+  border-bottom: 1px solid var(--color-border-separator);
+  background-color: white;
+  padding: 2rem 0;
+}
+.container section .closeness h2 {
+  display: flex;
+  margin-top: 0;
+  justify-content: space-between;
+}
+.container section .closeness h2 .see-map {
+  flex-basis: 20%;
+  text-align: center;
+}
+.container section .closeness p {
+  display: flex;
+  color: inherit;
+  text-align: left;
+}
+.container section .closeness p strong {
+  flex-basis: 20%;
+}
+.container section .closeness p .content {
+  flex-basis: 60%;
+}
+.container section .closeness p .distance {
+  flex-basis: 20%;
+  text-align: center;
+}
+
+.container section .services {
+  border-bottom: 1px solid var(--color-border-separator);
+  background-color: white;
+  padding: 2rem 0;
+}
+.container section .services ul {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid red;
+}
+.container section .services ul li {
+  flex-basis: 50%;
+  font-size: 1rem;
+  vertical-align: middle;
+}
+.container section .services ul li i {
+  margin-right: 1rem;
+  font-size: 1.6rem;
+}
+
+/* Button */
+button.btn-upate {
+  background-color: var(--btn-color);
+  color: white;
+  border: none;
+  outline: none;
+  padding: 0.6rem 1.8rem;
+  font-size: 1em;
+  border-radius: 50px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  text-transform: capitalize;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+button.btn-upate:hover {
+  opacity: 0.9;
+}
+button.btn-upate:active {
+  box-shadow: inset 1px 1px 2px white, inset 0 0 4px black, 1px 1px 1px #808080;
+  opacity: 1;
+}
+
+.see-map {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: normal;
+  color: var(--text-color-other);
+}
+.see-map * {
+  font-size: 1.4rem;
+  color: inherit;
+}
+.see-map:hover {
+  opacity: 0.6;
+}
+.see-map:active {
+  opacity: 1;
+}
+
+* {
+  box-sizing: border-box;
+  color: var(--text-color);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+section .title {
+  color: var(--text-color-other) !important;
+}
+
+.container {
+  max-width: 1024px;
+  margin: auto;
+  padding-top: 3rem;
+}
+
+header {
+  max-width: 1024px;
+  margin: auto;
+}
+header nav {
+  margin-top: -10rem;
+  color: var(--text-color);
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+header nav ul li a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  font-size: 0.8rem;
+  padding: 0 1rem;
+}
+header nav ul li a i {
+  font-size: 1.44rem;
+  color: inherit;
+  margin-bottom: 5px;
+}
+header nav ul li a:hover {
+  color: var(--text-color-hover);
+}
+header nav ul li a.logo-upate img {
+  height: 2rem;
+}
+header nav ul.info li {
+  display: flex;
+}
+header nav ul.info li a {
+  flex-direction: row;
+}
+header nav ul.info li a i {
+  margin: 0 10px;
+}
+
+/*# sourceMappingURL=styles.css.map */

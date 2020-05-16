@@ -1,0 +1,25 @@
+.container{
+    section{
+        .services {
+            border-bottom: 1px solid var(--color-border-separator);
+            background-color: white;
+            padding: 2rem 0;
+
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                border: 1px solid red;
+                li {
+                    flex-basis: 50%;
+                    font-size: 1rem;
+                    vertical-align: middle;
+                    i {
+                        margin-right: 1rem;
+                        font-size: 1.6rem
+                    }
+                }
+            }
+           
+        }
+    }
+}

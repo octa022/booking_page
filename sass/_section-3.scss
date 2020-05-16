@@ -1,0 +1,35 @@
+.container{
+    section{
+        .closeness {
+            border-bottom: 1px solid var(--color-border-separator);
+            background-color: white;
+            padding: 2rem 0;
+            h2{
+                display: flex;
+                margin-top: 0;
+                justify-content: space-between;
+                .see-map {
+                    flex-basis: 20%;
+                    text-align: center
+                }
+            }
+            p {
+                display: flex;
+                color: inherit;
+                text-align: left;
+                // margin: 0;
+
+                strong {
+                    flex-basis: 20%
+                }
+                .content {
+                    flex-basis: 60%
+                }
+                .distance {
+                    flex-basis: 20%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
