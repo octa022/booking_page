@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <link rel="stylesheet" href="./css/styles.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
@@ -103,16 +105,21 @@
                         </span>
                     </div>
                     <div class="reservation">
-                        <p> <span>Fechas:</span> 1 sep 2020 - 4 sep 2020</p>
-                        <p> <span>Habitaciones: </span> 1 </p>
-                        <p> <span>Personas:</span> 2</p>
+                        <div class="data">
+                            <p> <span>Fechas:</span> 1 sep 2020 - 4 sep 2020</p>
+                            <p> <span>Habitaciones: </span> 1 </p>
+                            <p> <span>Personas:</span> 2</p>
+                        </div>
 
                         <div class="total">
-                            <strong>ARS 29.145,93</strong> <small>Total final</small>
-                            <br>
-                            <small>Impuestos y tasas incluidos</small>
-                        </div>
+                            <p>
+                                <strong>ARS 29.145,93</strong> <small>Total final</small>
+                            </p>
+                            <p>
+                                <small>Impuestos y tasas incluidos</small>
+                            </p>
                             <button class="btn-upate">ver habitaciones</button>
+                        </div>
                     </div>
                     <div class="horary">
                         <h2 class="title">Horarios</h2>
@@ -235,28 +242,26 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>
-                            <div>
-                                <img src="./image/img.jpg" alt="">
-                                <span class="content">
-                                    <h3>habitación doble superior</h3>
-                                    <ul>
-                                        <li>
-                                            <i class="fa fa-wifi"></i>
-                                            Wi-Fi Gratis
-                                        </li>
-                                        <li>
-                                            <i class="fa fa-utensils"></i>
-                                            Restaurantes
-                                        </li>
-                                        <li>
-                                            <i class="fa fa-car"></i>
-                                            Aparcamiento
-                                        </li>
-                                    </ul>
-                                    <a href="" class="link"> Ver detalle de la habitacion</a>
-                                </span>
-                            </div>
+                        <td class="type">
+                            <img src="./image/img.jpg" alt="">
+                            <span class="content">
+                                <h3>habitación doble superior</h3>
+                                <ul>
+                                    <li>
+                                        <i class="fa fa-wifi"></i>
+                                        Wi-Fi Gratis
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-utensils"></i>
+                                        Restaurantes
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-car"></i>
+                                        Aparcamiento
+                                    </li>
+                                </ul>
+                                <a href="" class="link"> Ver detalle de la habitacion</a>
+                            </span>
                         </td>
                         <td class="options">
                             <ul class="list-style">
@@ -266,7 +271,7 @@
                             </ul>
                         </td>
                         <td class="price">
-                            <span>ars <strong>5.829</strong></span>
+                            <span class="title-r">Precio por noche</span> <span>ars <strong>5.829</strong></span>
                         </td>
                         <td class="choose">
                             <input type="radio" id="" name="" value="">
@@ -284,13 +289,7 @@
                             <button class="btn-upate">Reservar ahora</button>
                         </td>
                     </tr>
-                    <tr>
-                        <td>Rhythm Guitar</td>
-                        <td>Rhythm Guitar</td>
-                        <td>Rhythm Guitar</td>
-                        <td>Paul McCartney</td>
-                        <td>Bass</td>
-                    </tr>
+
                   </tbody>
                 </table>
 

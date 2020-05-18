@@ -94,7 +94,19 @@
                         }
                     }
 
-
+                    @include breakpoint{
+                        flex-basis: 100%;
+                        display: flex;
+                        .data{
+                            flex:1;
+                        }
+                        .total {
+                            margin: 0;
+                            p {
+                                display: block;
+                            }
+                        }
+                    }
                 }
                 .horary {
                     flex-basis: 60%;
@@ -104,7 +116,6 @@
                     border-bottom: 1px solid var(--color-border-separator);
                     h2 {
                         flex-grow: 1;
-                        // color: var(--text-color-other);
                     }
                     ul {
                         flex-grow: 2;
@@ -123,6 +134,15 @@
                                 border-right: 1px solid #CBCBCB;
                             }
                         }
+                    }
+                    @include breakpoint{
+                        flex-basis: 100%;
+                        ul {
+                            li:not(.separator) {
+                                flex: 1
+                            }
+                        }
+
                     }
                 }
 

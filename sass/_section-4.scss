@@ -20,6 +20,10 @@
                         font-size: 1.6rem
                     }
                 }
+
+                @include breakpoint{
+                    max-width: 100%;
+                }
             }
            
         }

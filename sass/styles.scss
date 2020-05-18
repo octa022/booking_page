@@ -4,6 +4,14 @@
     --text-color-hover: #ED0081;
     --btn-color: #ED0081;
     --color-border-separator: #CBCBCB;
+    --table-border-color:#ED0081;
+}
+
+@mixin breakpoint ($point: 769px) {
+  @media screen and (max-width: $point) {
+    @content;
+  }
+// @include breakpoint ($point: 1400px)
 }
 
 /* General */
@@ -58,6 +66,10 @@ section {
     max-width: 1024px;
     margin: auto;
     padding-top: 3rem;
+    @include breakpoint{
+        padding-left: 5vw;
+        padding-right: 5vw
+    }
 }
 /* End - General */
 

@@ -5,6 +5,7 @@
   --text-color-hover: #ED0081;
   --btn-color: #ED0081;
   --color-border-separator: #CBCBCB;
+  --table-border-color:#ED0081;
 }
 
 /* General */
@@ -43,6 +44,12 @@ section .title {
   max-width: 1024px;
   margin: auto;
   padding-top: 3rem;
+}
+@media screen and (max-width: 769px) {
+  .container {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
 }
 
 /* End - General */
@@ -92,6 +99,23 @@ header nav ul.info li a {
 }
 header nav ul.info li a i {
   margin: 0 10px;
+}
+@media screen and (max-width: 769px) {
+  header nav ul.info {
+    display: none;
+  }
+}
+@media screen and (max-width: 769px) {
+  header nav ul:not(.info) {
+    justify-content: initial;
+    width: 100%;
+  }
+  header nav ul:not(.info) li:first-child {
+    flex: 1 0 0;
+  }
+  header nav ul:not(.info) li:first-child a.logo-upate img {
+    margin-right: auto;
+  }
 }
 
 /* End - Header - Navbar */
@@ -160,6 +184,21 @@ header nav ul.info li a i {
 .container section .principal article .reservation .total strong {
   font-size: 1.4rem;
 }
+@media screen and (max-width: 769px) {
+  .container section .principal article .reservation {
+    flex-basis: 100%;
+    display: flex;
+  }
+  .container section .principal article .reservation .data {
+    flex: 1;
+  }
+  .container section .principal article .reservation .total {
+    margin: 0;
+  }
+  .container section .principal article .reservation .total p {
+    display: block;
+  }
+}
 .container section .principal article .horary {
   flex-basis: 60%;
   display: flex;
@@ -188,6 +227,14 @@ header nav ul.info li a i {
 .container section .principal article .horary ul li.separator {
   border-right: 1px solid #CBCBCB;
 }
+@media screen and (max-width: 769px) {
+  .container section .principal article .horary {
+    flex-basis: 100%;
+  }
+  .container section .principal article .horary ul li:not(.separator) {
+    flex: 1;
+  }
+}
 
 /* End - Section 1 */
 /* Section 2 */
@@ -203,6 +250,11 @@ header nav ul.info li a i {
   color: inherit;
   text-align: left;
   margin: 0;
+}
+@media screen and (max-width: 769px) {
+  .container section .learn_more p {
+    text-align: justify;
+  }
 }
 
 /* End - Section 2 */
@@ -236,6 +288,19 @@ header nav ul.info li a i {
   flex-basis: 20%;
   text-align: center;
 }
+@media screen and (max-width: 769px) {
+  .container section .closeness p {
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+  }
+  .container section .closeness p strong {
+    flex-basis: 100%;
+    margin-bottom: 0.5rem;
+  }
+  .container section .closeness p .content {
+    flex-basis: 80%;
+  }
+}
 
 /* End - Section 3 */
 /* Section 4 */
@@ -259,6 +324,11 @@ header nav ul.info li a i {
   margin-right: 1rem;
   font-size: 1.6rem;
 }
+@media screen and (max-width: 769px) {
+  .container section .services ul {
+    max-width: 100%;
+  }
+}
 
 /* End - Section 4 */
 /* Section 5 */
@@ -266,6 +336,11 @@ header nav ul.info li a i {
   border-bottom: 1px solid var(--color-border-separator);
   background-color: white;
   padding: 2rem 0;
+}
+@media screen and (max-width: 769px) {
+  .container section .instructions {
+    text-align: justify;
+  }
 }
 
 /* End - Section 5 */
@@ -290,6 +365,13 @@ header nav ul.info li a i {
   border-collapse: separate;
   border-spacing: 6px 12px;
 }
+@media screen and (max-width: 769px) {
+  .container section .available table {
+    border: 2px solid var(--table-border-color);
+    border-radius: 20px !important;
+    border-spacing: 5px 5px;
+  }
+}
 .container section .available table thead {
   background-color: white;
   text-transform: uppercase;
@@ -310,29 +392,34 @@ header nav ul.info li a i {
   max-width: 250px;
   width: 250px;
 }
+@media screen and (max-width: 769px) {
+  .container section .available table thead {
+    display: none;
+  }
+}
 .container section .available table tbody {
   font-size: 0.9rem;
 }
 .container section .available table tbody tr td {
   background-color: white;
 }
-.container section .available table tbody tr td div img {
+.container section .available table tbody tr td.type img {
   display: block;
   width: 100%;
   margin: auto;
 }
-.container section .available table tbody tr td div .content {
+.container section .available table tbody tr td.type .content {
   display: block;
   margin: auto;
   max-width: 80%;
 }
-.container section .available table tbody tr td div .content h3 {
+.container section .available table tbody tr td.type .content h3 {
   text-transform: capitalize;
 }
-.container section .available table tbody tr td div .content ul li {
+.container section .available table tbody tr td.type .content ul li {
   padding: 0.3rem 0;
 }
-.container section .available table tbody tr td div .content ul li i {
+.container section .available table tbody tr td.type .content ul li i {
   width: 1.6rem;
 }
 .container section .available table tbody tr td.options {
@@ -351,6 +438,9 @@ header nav ul.info li a i {
 }
 .container section .available table tbody tr td.price {
   text-align: center;
+}
+.container section .available table tbody tr td.price .title-r {
+  display: none;
 }
 .container section .available table tbody tr td.price span {
   text-transform: uppercase;
@@ -386,6 +476,65 @@ header nav ul.info li a i {
   width: 90%;
   margin: 0.5rem auto;
   display: block;
+}
+@media screen and (max-width: 769px) {
+  .container section .available table tbody tr {
+    display: flex;
+    flex-direction: column;
+  }
+  .container section .available table tbody tr td.type {
+    display: flex;
+    width: 100%;
+    border-bottom: 2px solid var(--table-border-color);
+  }
+  .container section .available table tbody tr td.type img {
+    flex: 1;
+    width: 50%;
+    margin: auto;
+  }
+  .container section .available table tbody tr td.type .content {
+    display: inline-block;
+    flex: 1;
+    padding: 1rem;
+  }
+  .container section .available table tbody tr td.options {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--color-border-separator);
+  }
+  .container section .available table tbody tr td.price {
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--color-border-separator);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .container section .available table tbody tr td.price .title-r {
+    text-transform: initial;
+    font-weight: bold;
+    display: block;
+  }
+  .container section .available table tbody tr td.choose {
+    display: none;
+  }
+  .container section .available table tbody tr td.detail {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.5rem;
+  }
+  .container section .available table tbody tr td.detail span:first-child {
+    flex-basis: 40%;
+  }
+  .container section .available table tbody tr td.detail .price {
+    flex-basis: 60%;
+    text-align: right;
+  }
+  .container section .available table tbody tr td.detail button {
+    flex-basis: 60%;
+    float: right;
+    margin: 0 0 0 auto;
+  }
 }
 
 /* End - Section 6 */
@@ -426,6 +575,30 @@ header nav ul.info li a i {
 .container footer div:nth-child(1) span {
   flex: 1 1 auto;
 }
+@media screen and (max-width: 769px) {
+  .container footer div:nth-child(1) {
+    flex-wrap: wrap;
+  }
+  .container footer div:nth-child(1) .logo {
+    flex-basis: 50%;
+  }
+  .container footer div:nth-child(1) .logo img {
+    width: 100%;
+  }
+  .container footer div:nth-child(1) .social-networks {
+    flex-basis: 50%;
+    justify-content: flex-end;
+    align-self: center;
+  }
+  .container footer div:nth-child(1) span {
+    padding-right: 0.5rem;
+    flex: 1 0 auto;
+    align-self: start;
+  }
+  .container footer div:nth-child(1) span small {
+    white-space: nowrap;
+  }
+}
 .container footer div:nth-child(2) {
   display: flex;
   align-items: center;
@@ -433,6 +606,22 @@ header nav ul.info li a i {
 .container footer div:nth-child(2) span {
   flex: 1 1 auto;
   min-width: 220px;
+}
+@media screen and (max-width: 769px) {
+  .container footer div:nth-child(2) {
+    display: block;
+    text-align: justify;
+  }
+  .container footer div:nth-child(2) .links {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    flex-wrap: wrap;
+  }
+  .container footer div:nth-child(2) .links a {
+    margin-right: 1rem;
+    white-space: nowrap;
+  }
 }
 .container footer div:nth-child(3) {
   display: flex;

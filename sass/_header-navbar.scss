@@ -55,6 +55,24 @@ header{
                         }
                     }
                 }
+                @include breakpoint {
+                    display: none
+                }
+            }
+
+            @include breakpoint {
+                &:not(.info){
+                    justify-content: initial;
+                    width: 100%;
+                    li:first-child {
+                        flex: 1 0 0;
+                        a.logo-upate {
+                            img {
+                                margin-right: auto;
+                            }
+                        }
+                    }
+                }
             }
 
         }
