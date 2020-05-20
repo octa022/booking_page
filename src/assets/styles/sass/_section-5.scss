@@ -1,0 +1,15 @@
+/* Section 5 */
+.container{
+    section{
+        .instructions {
+            border-bottom: 1px solid var(--color-border-separator);
+            background-color: white;
+            padding: 2rem 0;
+
+            @include breakpoint{
+                text-align: justify;
+            }
+        }
+    }
+}
+/* End - Section 5 */

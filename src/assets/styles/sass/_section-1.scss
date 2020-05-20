@@ -1,0 +1,153 @@
+/* Section 1 */
+.container{
+    section{
+        .principal {
+            background-color: white;
+            img {
+                margin: auto;
+                width: 100%
+            }
+
+            article {
+                // border: 1px solid orange;
+                display: flex;
+                flex-wrap: wrap;
+
+                .description{
+                    // border: 1px solid orange;
+                    flex: 1 0 70%;
+                    display: flex;
+                    color: var(--text-color);
+                    .info {
+                        // display: flex;
+                        // flex-direction: column;
+                        // justify-content: center;
+                        // align-items: center;
+                        padding: 1rem 0;
+                        flex: 3;
+                        // border: 1px solid green;
+                        h1{
+                            // border: 1px solid red;
+                            font-size: 2rem;
+                            margin: 0
+                        }
+                        p {
+                            // border: 1px solid green;
+                        }
+                        .icons {
+                            display: block;
+                            i {
+                                font-size: 1.2rem;
+                                margin-right: 1rem;
+                            }
+                        }
+                    }
+                    .added{
+                        // border: 1px solid red;
+                        flex: 1;
+                        // display: flex;
+                        // flex-direction: column;
+                        // align-items: center;
+                        // justify-content: center;
+                        padding: 2rem 2px;
+                        // text-align:center;
+                        .stars {
+                            color: orange;
+                            display: block;
+                            * {
+                                color: inherit;
+                            }
+                        }
+                        .see-map {
+                            // border: 1px solid red;
+                            // display: block;
+                            // color: var(--text-color-other);
+                            // * {
+                            //     color: inherit;
+                            // }
+                        }
+                    }
+                }
+
+                .reservation {
+                    // border: 1px solid red;
+                    flex: 1 0 30%;
+                    color: var(--text-color);
+                    padding: 1rem 2px;
+                    max-height: 9rem;
+                    overflow-y: visible;
+                    p {
+                        display: inline-block;
+                        min-width: 50%;
+                        white-space: nowrap;
+
+                        margin: 0;
+                        span {
+                            color: var(--text-color-other)
+                        }
+                    }
+
+                    .total {
+                        margin: 3rem 0 0.6rem 0;
+                        strong {
+                            font-size: 1.4rem
+                        }
+                    }
+
+                    @include breakpoint{
+                        flex-basis: 100%;
+                        display: flex;
+                        .data{
+                            flex:1;
+                        }
+                        .total {
+                            margin: 0;
+                            p {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+                .horary {
+                    flex-basis: 60%;
+                    display: flex;
+                    align-items: center;
+                    padding: 0.2rem 2px;
+                    border-bottom: 1px solid var(--color-border-separator);
+                    h2 {
+                        flex-grow: 1;
+                    }
+                    ul {
+                        flex-grow: 2;
+                        display: flex;
+                        padding: 0;
+                        list-style: none;
+                        li {
+                            margin-right: 2rem;
+                            padding: 0.5rem 0;
+                            text-transform: uppercase;
+                            text-align: center;
+                            strong {
+                                display: block;
+                            }
+                            &.separator {
+                                border-right: 1px solid #CBCBCB;
+                            }
+                        }
+                    }
+                    @include breakpoint{
+                        flex-basis: 100%;
+                        ul {
+                            li:not(.separator) {
+                                flex: 1
+                            }
+                        }
+
+                    }
+                }
+
+            }
+        }
+    }
+}
+/* End - Section 1 */

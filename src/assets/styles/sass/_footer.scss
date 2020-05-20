@@ -1,0 +1,106 @@
+.container{
+    footer {
+        background-color: white;
+        padding: 1rem 0;
+
+        div {
+            padding: 1rem 0;
+            .logo {
+                img{
+                    width: 200px; 
+                    max-width: 200px;
+                }
+            }
+
+            .social-networks {
+                display: flex; 
+                i {
+                    font-size: 2rem;
+                    margin-right: 0.5rem
+                }
+            }
+
+            .links{
+                a {
+                    display: block;
+                    text-decoration: none;
+                    font-size: small;
+                    margin-bottom: 0.5rem;
+                    &:hover {
+                        color: var(--text-color-other);
+                    }
+                }
+            }
+
+            span {
+                small {
+                    display: block
+                }
+            }
+
+            &:nth-child(1) {
+                display: flex;
+                align-items: center;
+                span{
+                    flex:1 1 auto;
+                }
+                @include breakpoint {
+                    flex-wrap: wrap;
+                    .logo {
+                        flex-basis: 50%;
+                        img{ 
+                            width: 100%
+                        }
+                    }
+                    .social-networks {
+                        flex-basis: 50%;
+                        justify-content: flex-end;
+                        align-self: center;
+                    }
+                    span {
+                        padding-right: 0.5rem;
+                        flex: 1 0 auto;
+                        align-self: start;
+                        small {
+                            white-space: nowrap;
+                        }
+                    }
+                }
+
+            }
+            &:nth-child(2) {
+                display: flex;
+                align-items: center;
+                span{
+                    flex:1 1 auto;
+                    min-width: 220px
+                }
+                @include breakpoint {
+                    display: block;
+                    text-align: justify;
+                    .links {
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 1rem 0;
+                        flex-wrap: wrap;
+                        a {
+                            margin-right: 1rem;
+                            white-space: nowrap;
+                        }
+                    }
+                }
+            }
+            &:nth-child(3) {
+                display: flex;
+                justify-content: center;
+                span {
+                    flex-basis: 80px;
+                    * {
+                        width: 100%;
+                        padding: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}

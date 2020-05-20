@@ -1,0 +1,89 @@
+:root{
+    --text-color: #4E4E4E;
+    --text-color-other: #ED0081;
+    --text-color-hover: #ED0081;
+    --btn-color: #ED0081;
+    --color-border-separator: #CBCBCB;
+    --table-border-color:#ED0081;
+}
+
+@mixin breakpoint ($point: 769px) {
+  @media screen and (max-width: $point) {
+    @content;
+  }
+// @include breakpoint ($point: 1400px)
+}
+
+/* General */
+html, body{
+    height: 100%;
+    width:100%;
+    margin: 0;
+    padding: 0;
+}
+
+// test
+// body {
+//     background: url("../detalle_de_hotel-desktop.jpg");
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     width: 100%;
+//     height: 550vh;
+// }
+
+
+* {
+    box-sizing: border-box;
+    color: var(--text-color);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+
+    i {
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+button, a{
+    outline: none;
+    * {
+        outline: none;
+    }
+}
+
+section {
+    .title {
+        color: var(--text-color-other) !important;
+    }
+}
+
+.container{
+    max-width: 1024px;
+    margin: auto;
+    padding-top: 3rem;
+    @media screen and (max-width: 1080px) {
+        padding-left: 2vw;
+        padding-right: 2vw
+    }
+    @include breakpoint{
+        padding-left: 5vw;
+        padding-right: 5vw
+    }
+}
+/* End - General */
+
+
+@import './header-navbar';
+@import './section-1';
+@import './section-2';
+@import './section-3';
+@import './section-4';
+@import './section-5';
+@import './section-6';
+@import './footer';
+@import './btn';
