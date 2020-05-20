@@ -45,6 +45,12 @@ section .title {
   margin: auto;
   padding-top: 3rem;
 }
+@media screen and (max-width: 1080px) {
+  .container {
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+}
 @media screen and (max-width: 769px) {
   .container {
     padding-left: 5vw;
